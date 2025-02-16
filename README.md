@@ -1,6 +1,6 @@
 
 
-![](photo/banner english.jpg)
+![](photo/banner.jpg)
 
 # PD Adjustable DC Power Supply
 
