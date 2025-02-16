@@ -58,7 +58,7 @@ Here are the steps to set the current limit on the PD power supply
 
 ### Firmware Flashing
 
-The firmware used by this reflow hotplate requires Arduino IDE with [CH55xduino](https://github.com/DeqingSun/ch55xduino) installed. There are no external dependencies except the above board library.
+The firmware used by this PD power supply requires Arduino IDE with [CH55xduino](https://github.com/DeqingSun/ch55xduino) installed. There are no external dependencies except the above board library.
 
 **The firmware code is designed for 0.91 inch single color OLED module running over I2C mode only**. Other display module will not work.
 
