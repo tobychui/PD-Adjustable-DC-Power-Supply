@@ -15,7 +15,7 @@ I also made a pocket size reflow hotplate for automatically reflowing SMD compon
 | Item             | Value                                                        | Remarks                                              |
 | ---------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
 | Power Input      | USB PD (type C) 60W at 20V 3A                                | Refer to CH224K datasheet for trigger specifications |
-| Power Output     | Adjustable DC (2V to 20V), max 4A or 50W                     | Refer to XL4015E datasheet for specification         |
+| Power Output     | Adjustable DC (2V to 20V), max 5A or 40W                     | Refer to XL4015E datasheet for specification         |
 | Dimension        | 10cm x 5.2cm x 1.9cm (without knobs)<br />10cm x 5.2cm x 3.3cm (with knobs) | Adj. Knobs are replaceable                           |
 | Output Mode      | Constant Voltage (CV) / Constant Current (CC)                |                                                      |
 | Display Size     | 0.91 inch OLED                                               |                                                      |
