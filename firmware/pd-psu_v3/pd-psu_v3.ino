@@ -62,10 +62,10 @@ void loop() {
   currentReading = min(currentReading, 999);
 
   //Print result on USB Serial
-  USBSerial_print(((float)voltageReading / 1000));
-  USBSerial_print(",");
-  USBSerial_println(((float)currentReading / 100));
-
+  //USBSerial_print(((float)voltageReading / 1000));
+  //USBSerial_print(",");
+  //USBSerial_println(((float)currentReading / 100));
+  USBSerial_println((int)isCCMode);
   //Update OLED display
   PS_Screen(voltageReading/10, currentReading, isCCMode);
 }
