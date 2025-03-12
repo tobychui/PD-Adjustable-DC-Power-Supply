@@ -1,7 +1,7 @@
 OpAmp analysis
 ===
 
-![](photo/OpAmpanalysis.PNG)
+![](../photo/OpAmpanalysis.PNG)
 
 > ## Note
 > 
