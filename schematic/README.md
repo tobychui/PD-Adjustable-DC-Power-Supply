@@ -1,3 +1,7 @@
+![Schematic Diagram](overall.png)
+
+---
+
 # OpAmp Analysis
 
 ![OpAmp Analysis Diagram](OpAmpanalysis.PNG)
