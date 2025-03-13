@@ -1,86 +1,93 @@
-OpAmp analysis
-===
+# OpAmp Analysis
 
-![](../photo/OpAmpanalysis.PNG)
+![OpAmp Analysis Diagram](OpAmpanalysis.PNG)
 
-> ## Note
-> 
-> Vout- = Iout * 0.05Ω
-> 
-> 0kΩ<=Rcurrent(R9)<=10kΩ
-> 
-> V1 = 2.5*(Rcurrent/(R4+Rcurrent))
-
-
-## OpAmp1(right one)
-
-### input+ = Vout-
-
-### input- = V1*(R8/(R6+R8))~=V1/10
-
-### output
-#### if( Vout- > V1/10 )
-
-> Vout- / 0.25 > (Rcurrent/(R4+Rcurrent))
+> **Note:**
 >
-> Iout > 5(Rcurrent/R4+Rcurrent)
+> - Vout- = Iout × 0.05 Ω  
+> - 0 kΩ ≤ Rcurrent (R9) ≤ 10 kΩ  
+> - V1 = 2.5 × (Rcurrent / (R4 + Rcurrent))
 
-==>5V ==> CC mode
+---
 
+## OpAmp1 (Right Side)
 
-#### if(Vout- < V1/10)
+### Inputs
 
-> Vout- / 0.25 < (Rcurrent/(R4+Rcurrent))
->
-> Iout < 5(Rcurrent/(R4+Rcurrent))
+- **Non-inverting (+):** Vout-
+- **Inverting (–):** V1 × (R8 / (R6 + R8)) ≈ V1 / 10
 
-==>0V ==> CV mode
+### Output
 
+#### Case 1: If Vout- > V1/10
 
-## OpAmp2(left one)
+- Vout- / 0.25 > (Rcurrent / (R4 + Rcurrent))
+- Iout > 5 × (Rcurrent / (R4 + Rcurrent))
+- **Result:** Output = 5V → Constant Current (CC) mode
 
-### input+ = V1
-> V1 = 2.5*(Rcurrent/(R4+Rcurrent))
+#### Case 2: If Vout- < V1/10
 
-### input- = Vout-
+- Vout- / 0.25 < (Rcurrent / (R4 + Rcurrent))
+- Iout < 5 × (Rcurrent / (R4 + Rcurrent))
+- **Result:** Output = 0V → Constant Voltage (CV) mode
 
-### output
-#### if(V1>Vout-)
+---
 
-> (Rcurrent/(R4+Rcurrent))>Vout-/2.5
-> 
-> (Rcurrent/(R4+Rcurrent))>0.02*Iout
-> 
-> 50(Rcurrent/(R4+Rcurrent))>Iout
+## OpAmp2 (Left Side)
 
-==>5V ==> short
+### Inputs
 
+- **Non-inverting (+):** V1, where V1 = 2.5 × (Rcurrent / (R4 + Rcurrent))
+- **Inverting (–):** Vout-
 
-#### if(V1<Vout-)
+### Output
 
-> (Rcurrent/(R4+Rcurrent))<Vout-/2.5
-> 
-> (Rcurrent/(R4+Rcurrent))<0.02*Iout
-> 
-> 50(Rcurrent/(R4+Rcurrent))<Iout
+#### Case 1: If V1 > Vout-
 
-==>0V ==> Not short
+- (Rcurrent / (R4 + Rcurrent)) > Vout- / 2.5  
+- (Rcurrent / (R4 + Rcurrent)) > 0.02 × Iout)
+- 50 × (Rcurrent / (R4 + Rcurrent)) > Iout
+- **Result:** Output = 5V → Short
 
+#### Case 2: If V1 < Vout-
+
+- (Rcurrent / (R4 + Rcurrent)) < Vout- / 2.5  
+- (Rcurrent / (R4 + Rcurrent)) < 0.02 × Iout)
+- 50 × (Rcurrent / (R4 + Rcurrent)) < Iout
+- **Result:** Output = 0V → Not short
+
+---
 
 ## Summary
-When(Iout>50(Rcurrent/(R4+Rcurrent)))
 
-==> CC mode AND short
+- **CC mode and Short:** When Iout > 50 × (Rcurrent / (R4 + Rcurrent))
+- **CC mode and Not short:** When 50 × (Rcurrent / (R4 + Rcurrent)) > Iout > 5 × (Rcurrent / (R4 + Rcurrent))
+- **CV mode and Not short:** When Iout < 5 × (Rcurrent / (R4 + Rcurrent))
+
+> **Notice:**  
+> Due to the finite open-loop gain and input offset voltage, the circuit does not behave ideally, resulting in some deviation.
 
 ---
-When(50(Rcurrent/(R4+Rcurrent))>Iout>5(Rcurrent/(R4+Rcurrent)))
 
-==> CC mode AND Not short
+## Example Calculation
 
----
-When(5(Rcurrent/(R4+Rcurrent))>Iout)
+Assume the following values:  
+- R4 = 75K  
+- Maximum Rcurrent = 10K
 
-==> CV mode AND Not short
+1. **Calculate the ratio:**  
+   Ratio = Rcurrent / (R4 + Rcurrent) = 10K / (75K + 10K) = 10/85 ≈ 0.1176
 
-> ## notice
-> Due to the finite open-loop gain and input offset voltage, the circuit will not behave like an ideal circuit, resulting in a certain deviation.
+2. **Determine the thresholds for Iout:**
+   - **CC mode and Short:**  
+     Iout > 50 × 0.1176 ≈ 5.88  
+   - **CC mode and Not short:**  
+     5.88 > Iout > 5 × 0.1176 ≈ 0.588  
+   - **CV mode and Not short:**  
+     Iout < 0.588
+
+These threshold values illustrate how the circuit behavior changes based on the output current when R4 is 75K and the maximum Rcurrent is 10K.
+
+
+
+
