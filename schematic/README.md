@@ -1,3 +1,5 @@
+# Schematic
+
 ![Schematic Diagram](overall.png)
 
 ---
