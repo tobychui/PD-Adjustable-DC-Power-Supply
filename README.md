@@ -51,7 +51,7 @@ Here are the steps to set the current limit on the PD power supply
 - Firmware: The CH552G firmware for the real time information display
 - PCB: The Gerber files and EasyEDA source file (which you can generate part lists / BOM from the online editor if needed)
 - 3D Model: The 3D model for the case
-- Schematic: A hand drawn circuit diagram (as this is a simple project, I directly starts with a PCB file instead of first drawing a schematic)
+- Schematic: Circuit diagram & Schematic file & logic circuit analysis
 - Photo: Some photo shoot of the finalized product
 
 
