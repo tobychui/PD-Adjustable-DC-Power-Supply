@@ -1,6 +1,10 @@
 # Schematic
+![Schematic Diagram](schematic.PNG)
 
-![Schematic Diagram](overall.png)
+---
+
+# Schematic draft
+![Old Schematic Diagram](overall.png)
 
 ---
 
