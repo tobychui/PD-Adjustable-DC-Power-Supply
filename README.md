@@ -26,13 +26,19 @@ I also made a pocket size reflow hotplate for automatically reflowing SMD compon
 
 ### Photo
 
-![](photo/DSC00285.JPG)
+![](photo/DSC00436.jpg)
 
-![](photo/DSC00293.jpg)
+![](photo/DSC00426.jpg)
 
-![](photo/DSC00296.jpg)
+![](photo/DSC00428.jpg)
 
-![](photo/DSC00336.jpg)
+![](photo/DSC00429.jpg)
+
+![](photo/DSC00433.jpg)
+
+![](photo/DSC00441.jpg)
+
+
 
 ### Setting a Current Limit
 
@@ -54,7 +60,11 @@ Here are the steps to set the current limit on the PD power supply
 - Schematic: Circuit diagram & Schematic file & logic circuit analysis
 - Photo: Some photo shoot of the finalized product
 
+### Version Info
 
+If you are planning to make one with the help of PCBA services, you can use the version 4 which is optimized for semi-PCBA manufacturing routine. 
+
+If you are planning to DIY one from scratch (only the PCB is printed, all other parts are manually soldered), consider using reversion 5 by HCCLAB which has been optimized for manual soldering.
 
 ### Firmware Flashing
 
